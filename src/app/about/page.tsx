@@ -49,7 +49,7 @@ export default function AboutPage() {
             About Tech Bridge Pakistan
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Empowering Pakistan's
+            Empowering Pakistan
             <span className="text-blue-600"> Digital Future</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -112,7 +112,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">
-                  To become Pakistan's leading digital skills institute,
+                  To become Pakistan leading digital skills institute,
                   recognized for excellence in education and innovation. We
                   envision a future where every Pakistani has access to quality
                   digital education and the opportunity to thrive in the digital

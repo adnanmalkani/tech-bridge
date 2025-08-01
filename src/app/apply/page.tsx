@@ -1,61 +1,67 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import BackToHome from '@/components/BackToHome';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import BackToHome from "@/components/BackToHome";
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    dateOfBirth: '',
-    gender: '',
-    course: '',
-    educationLevel: '',
-    previousExperience: '',
-    motivation: '',
-    address: '',
-    city: '',
-    emergencyContactName: '',
-    emergencyContactPhone: '',
-    emergencyContactRelationship: ''
+    fullName: "",
+    email: "",
+    phone: "",
+    dateOfBirth: "",
+    gender: "",
+    course: "",
+    educationLevel: "",
+    previousExperience: "",
+    motivation: "",
+    address: "",
+    city: "",
+    emergencyContactName: "",
+    emergencyContactPhone: "",
+    emergencyContactRelationship: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const response = await fetch('/api/applications', {
-        method: 'POST',
+      const response = await fetch("/api/applications", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-      
+
       const result = await response.json();
-      
+
       if (result.success) {
         setSubmitted(true);
       } else {
         alert(`Error: ${result.error}`);
       }
     } catch (error) {
-      console.error('Submission error:', error);
-      alert('Failed to submit application. Please check your internet connection and try again.');
+      console.error("Submission error:", error);
+      alert(
+        "Failed to submit application. Please check your internet connection and try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -74,7 +80,9 @@ const ApplicationForm = () => {
                 Application Submitted Successfully!
               </h1>
               <p className="text-gray-600 mb-8">
-                Thank you for applying to Tech Bridge Pakistan. Our admissions team will review your application and contact you within 2-3 business days.
+                Thank you for applying to Tech Bridge Pakistan. Our admissions
+                team will review your application and contact you within 2-3
+                business days.
               </p>
               <div className="space-y-4 text-left bg-blue-50 rounded-2xl p-6">
                 <h3 className="font-semibold text-gray-800">Next Steps:</h3>
@@ -93,8 +101,8 @@ const ApplicationForm = () => {
                   </li>
                 </ul>
               </div>
-              <Button 
-                onClick={() => window.location.href = '/'}
+              <Button
+                onClick={() => (window.location.href = "/")}
                 className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full"
               >
                 Back to Home
@@ -114,10 +122,12 @@ const ApplicationForm = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Apply to <span className="gradient-text">Tech Bridge Pakistan</span>
+              Apply to{" "}
+              <span className="gradient-text">Tech Bridge Pakistan</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Take the first step towards transforming your career with our comprehensive digital skills training programs.
+              Take the first step towards transforming your career with our
+              comprehensive digital skills training programs.
             </p>
           </div>
 
@@ -127,12 +137,16 @@ const ApplicationForm = () => {
               {/* Personal Information */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">1</span>
+                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+                    1
+                  </span>
                   Personal Information
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
-                    <label className="block text-gray-700 font-medium mb-2">Full Name *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Full Name *
+                    </label>
                     <input
                       type="text"
                       name="fullName"
@@ -144,7 +158,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Gender *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Gender *
+                    </label>
                     <select
                       name="gender"
                       value={formData.gender}
@@ -159,7 +175,9 @@ const ApplicationForm = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Email Address *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Email Address *
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -171,7 +189,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Phone Number *
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -183,7 +203,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Date of Birth *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Date of Birth *
+                    </label>
                     <input
                       type="date"
                       name="dateOfBirth"
@@ -194,7 +216,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Education Level *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Education Level *
+                    </label>
                     <select
                       name="educationLevel"
                       value={formData.educationLevel}
@@ -205,8 +229,8 @@ const ApplicationForm = () => {
                       <option value="">Select your education level</option>
                       <option value="matriculation">Matriculation</option>
                       <option value="intermediate">Intermediate</option>
-                      <option value="bachelors">Bachelor's Degree</option>
-                      <option value="masters">Master's Degree</option>
+                      <option value="bachelors">Bachelors Degree</option>
+                      <option value="masters">Masters Degree</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -216,11 +240,15 @@ const ApplicationForm = () => {
               {/* Course Selection */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">2</span>
+                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+                    2
+                  </span>
                   Course Selection
                 </h2>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Preferred Course *</label>
+                  <label className="block text-gray-700 font-medium mb-2">
+                    Preferred Course *
+                  </label>
                   <select
                     name="course"
                     value={formData.course}
@@ -240,12 +268,16 @@ const ApplicationForm = () => {
               {/* Background Information */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">3</span>
+                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+                    3
+                  </span>
                   Background Information
                 </h2>
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Previous Experience</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Previous Experience
+                    </label>
                     <textarea
                       name="previousExperience"
                       value={formData.previousExperience}
@@ -256,7 +288,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Why do you want to join Tech Bridge Pakistan? *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Why do you want to join Tech Bridge Pakistan? *
+                    </label>
                     <textarea
                       name="motivation"
                       value={formData.motivation}
@@ -267,19 +301,22 @@ const ApplicationForm = () => {
                       placeholder="Share your motivation and career goals..."
                     />
                   </div>
-
                 </div>
               </div>
 
               {/* Contact Information */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">4</span>
+                  <span className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+                    4
+                  </span>
                   Address & Emergency Contact
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
-                    <label className="block text-gray-700 font-medium mb-2">Complete Address *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Complete Address *
+                    </label>
                     <textarea
                       name="address"
                       value={formData.address}
@@ -291,7 +328,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">City *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      City *
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -303,7 +342,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Emergency Contact Name *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Emergency Contact Name *
+                    </label>
                     <input
                       type="text"
                       name="emergencyContactName"
@@ -315,7 +356,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Emergency Contact Phone *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Emergency Contact Phone *
+                    </label>
                     <input
                       type="tel"
                       name="emergencyContactPhone"
@@ -327,7 +370,9 @@ const ApplicationForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Relationship to Emergency Contact *</label>
+                    <label className="block text-gray-700 font-medium mb-2">
+                      Relationship to Emergency Contact *
+                    </label>
                     <input
                       type="text"
                       name="emergencyContactRelationship"
@@ -354,11 +399,12 @@ const ApplicationForm = () => {
                       <span>Submitting Application...</span>
                     </div>
                   ) : (
-                    'Submit Application'
+                    "Submit Application"
                   )}
                 </Button>
                 <p className="text-gray-500 text-sm mt-4">
-                  By submitting this form, you agree to our terms and conditions.
+                  By submitting this form, you agree to our terms and
+                  conditions.
                 </p>
               </div>
             </form>

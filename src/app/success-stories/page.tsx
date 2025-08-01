@@ -45,7 +45,7 @@ export default function SuccessStoriesPage() {
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       story:
-        "From zero coding knowledge to building complex web applications. Tech Bridge Pakistan's comprehensive curriculum and expert mentorship made it possible.",
+        "From zero coding knowledge to building complex web applications. Tech Bridge Pakistan comprehensive curriculum and expert mentorship made it possible.",
       achievement: "Built 10+ projects",
       duration: "10 months course",
       rating: 5,
@@ -261,7 +261,7 @@ export default function SuccessStoriesPage() {
 
                 <CardContent>
                   <blockquote className="text-gray-700 italic mb-4 border-l-4 border-blue-600 pl-4">
-                    "{story.story}"
+                    {story.story}
                   </blockquote>
 
                   <div className="grid grid-cols-2 gap-4 mb-4">
@@ -321,9 +321,11 @@ export default function SuccessStoriesPage() {
                 className="border-0 shadow-lg bg-white/80 backdrop-blur-sm"
               >
                 <CardContent className="pt-6">
-                  <div className="text-4xl text-blue-600 mb-4">"</div>
+                  <div className="text-4xl text-blue-600 mb-4">
+                    {testimonial.role}
+                  </div>
                   <blockquote className="text-gray-700 italic mb-4">
-                    "{testimonial.text}"
+                    {testimonial.text}
                   </blockquote>
                   <div className="text-right">
                     <p className="font-semibold text-gray-900">
