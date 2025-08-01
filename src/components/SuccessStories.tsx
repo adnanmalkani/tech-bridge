@@ -166,9 +166,7 @@ const SuccessStories = () => {
 
               {/* Story Quote */}
               <blockquote className="text-gray-600 italic leading-relaxed text-xs sm:text-sm relative">
-                <span className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 absolute -top-1 sm:-top-2 -left-1 sm:-left-2">
-                  "
-                </span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl text-blue-200 absolute -top-1 sm:-top-2 -left-1 sm:-left-2"></span>
                 <span className="relative z-10">{story.story}</span>
               </blockquote>
             </div>
