@@ -48,7 +48,7 @@ const HeroSection = () => {
               <p className="text-lg sm:text-xl lg:text-xl text-gray-600 leading-relaxed max-w-xl font-light">
                 Transform your career with industry-leading courses. Join our
                 community of
-                <span className="font-semibold text-blue-600">
+                <span className="font-semibold text-blue-600 px-1">
                   5000+ successful graduates
                 </span>
                 who are now thriving in the digital world.
