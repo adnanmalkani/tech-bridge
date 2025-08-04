@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 
 const SuccessStories = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -122,7 +121,7 @@ const SuccessStories = () => {
               {/* Profile Section */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="relative w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 mx-auto mb-3 sm:mb-4">
-                  <Image
+                  <img
                     src={story.image}
                     alt={story.name}
                     className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full object-cover shadow-lg group-hover:scale-110 transition-transform-smooth border-2 sm:border-4 border-white"

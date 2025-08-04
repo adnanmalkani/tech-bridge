@@ -5,7 +5,7 @@ import BackToHome from "@/components/BackToHome";
 
 export default function AboutPage() {
   const stats = [
-    { number: "5000+", label: "Students Trained" },
+    { number: "500+", label: "Students Trained" },
     { number: "95%", label: "Job Placement Rate" },
     { number: "50+", label: "Industry Partners" },
     { number: "10+", label: "Years Experience" },

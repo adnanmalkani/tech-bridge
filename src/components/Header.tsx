@@ -54,10 +54,10 @@ const Header = () => {
               About
             </Link>
             <Link
-              href="/courses"
+              href="/programs"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all-smooth"
             >
-              Courses
+              Programs
             </Link>
             <Link
               href="/success-stories"
@@ -135,10 +135,10 @@ const Header = () => {
               About
             </Link>
             <Link
-              href="/courses"
+              href="/programs"
               className="block px-4 py-3 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all-smooth"
             >
-              Courses
+              Programs
             </Link>
             <Link
               href="/success-stories"

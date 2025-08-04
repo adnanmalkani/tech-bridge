@@ -220,7 +220,7 @@ export default function EventsPage() {
                 )}
 
                 <div className="relative">
-                  <Image
+                  <img
                     src={event.image}
                     alt={event.title}
                     className="w-full h-48 object-cover rounded-t-lg"
@@ -318,7 +318,7 @@ export default function EventsPage() {
                 className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow"
               >
                 <div className="relative">
-                  <Image
+                  <img
                     src={event.image}
                     alt={event.title}
                     className="w-full h-40 object-cover rounded-t-lg"

@@ -38,6 +38,14 @@ const MissionSection = () => {
       icon: "💡",
       gradient: "from-orange-500 to-red-500",
     },
+    // Add a new value emphasizing the volunteer nature:
+    {
+      title: "Community-Driven Impact",
+      description:
+        "Our volunteer-based approach ensures **free access** to quality internships, bridging the gap between Pakistani youth and industry opportunities.",
+      icon: "🤝",
+      gradient: "from-emerald-500 to-green-500",
+    },
   ];
 
   return (
