@@ -176,7 +176,7 @@ const ProgramsSection = () => {
                 {/* Features */}
                 <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   <h4 className="text-sm sm:text-base font-semibold text-gray-800">
-                    What you'll do:
+                    What you will do:
                   </h4>
                   <ul className="space-y-1.5 sm:space-y-2">
                     {program.features.map((feature, idx) => (
