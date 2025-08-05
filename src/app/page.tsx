@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ProgramsSection from "@/components/ProgramsSection";
+import InternshipsSection from "@/components/InternshipsSection";
 import SuccessStories from "@/components/SuccessStories";
 import EventsSection from "@/components/EventsSection";
 import MissionSection from "@/components/MissionSection";
@@ -28,7 +28,7 @@ export default function Home() {
         <HeroSection />
       </div>
       <div className="animate-fadeInUp animation-delay-200">
-        <ProgramsSection />
+        <InternshipsSection />
       </div>
       <div className="animate-fadeInUp animation-delay-400">
         <SuccessStories />

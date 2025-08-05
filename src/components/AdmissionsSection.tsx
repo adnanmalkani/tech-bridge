@@ -9,12 +9,12 @@ const AdmissionsSection = () => {
     setIsVisible(true);
   }, []);
 
-  const admissionSteps = [
+  const applicationSteps = [
     {
       step: "1",
-      title: "Choose Your Course",
+      title: "Choose Your Internship",
       description:
-        "Browse our comprehensive course catalog and select the program that aligns with your career goals.",
+        "Browse our internship catalog and select the program that aligns with your career goals.",
       icon: "📚",
       gradient: "from-blue-500 to-cyan-500",
     },
@@ -121,7 +121,7 @@ const AdmissionsSection = () => {
             style={{ animationDelay: "200ms" }}
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 px-4">
-              Simple <span className="gradient-text">Admission</span> Process
+              Simple <span className="gradient-text">Application</span> Process
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               Get started in just 4 easy steps
@@ -129,7 +129,7 @@ const AdmissionsSection = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {admissionSteps.map((step, index) => (
+            {applicationSteps.map((step, index) => (
               <div
                 key={index}
                 className={`group text-center ${
@@ -171,7 +171,7 @@ const AdmissionsSection = () => {
           >
             <div className="glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 hover-lift transition-all-smooth border border-white/20">
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
-                Admission <span className="gradient-text">Requirements</span>
+                Application <span className="gradient-text">Requirements</span>
               </h3>
               <div className="space-y-4 sm:space-y-6">
                 {requirements.map((requirement, index) => (

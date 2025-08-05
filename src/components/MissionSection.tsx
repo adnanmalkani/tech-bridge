@@ -11,20 +11,6 @@ const MissionSection = () => {
 
   const values = [
     {
-      title: "Excellence in Education",
-      description:
-        "We provide world-class training with industry-standard curriculum and experienced instructors.",
-      icon: "🎓",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "Practical Learning",
-      description:
-        "Our hands-on approach ensures students gain real-world experience through projects and internships.",
-      icon: "💼",
-      gradient: "from-green-500 to-teal-500",
-    },
-    {
       title: "Career Support",
       description:
         "We offer comprehensive career guidance, job placement assistance, and ongoing professional development.",
@@ -37,6 +23,13 @@ const MissionSection = () => {
         "We stay ahead of industry trends and incorporate the latest technologies in our curriculum.",
       icon: "💡",
       gradient: "from-orange-500 to-red-500",
+    },
+    {
+      title: "Practical Learning",
+      description:
+        "Our hands-on approach ensures students gain real-world experience through projects and internships.",
+      icon: "💼",
+      gradient: "from-green-500 to-teal-500",
     },
     // Add a new value emphasizing the volunteer nature:
     {
