@@ -53,7 +53,7 @@ const HeroSection = () => {
                 <span className="font-semibold text-blue-600 px-1">
                   500+ youth empowered
                 </span>
-                through our volunteer network.
+                through our volunteer network. We don't offer courses, we offer careers.
               </p>
             </div>
 

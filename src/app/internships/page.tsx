@@ -3,14 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import BackToHome from "@/components/BackToHome";
 
-export default function ProgramsPage() {
-  const programs = [
+export default function InternshipsPage() {
+  const internships = [
     {
       id: 1,
       title: "Graphics Design Apprenticeship",
       duration: "6 Months",
       level: "Beginner to Advanced",
-      stipend: "PKR 15,000-25,000/month",
       image:
         "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=400&h=250&fit=crop&crop=center",
       description:
@@ -42,7 +41,6 @@ export default function ProgramsPage() {
       title: "Digital Marketing Internship",
       duration: "8 Months",
       level: "Beginner to Professional",
-      stipend: "PKR 18,000-30,000/month",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center",
       description:
@@ -80,7 +78,6 @@ export default function ProgramsPage() {
       title: "Web Development Internship",
       duration: "10 Months",
       level: "Beginner to Advanced",
-      stipend: "PKR 20,000-35,000/month",
       image:
         "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=250&fit=crop&crop=center",
       description:
@@ -112,7 +109,6 @@ export default function ProgramsPage() {
       title: "AI & Machine Learning Internship",
       duration: "12 Months",
       level: "Intermediate",
-      stipend: "PKR 25,000-40,000/month",
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center",
       description:
@@ -151,7 +147,6 @@ export default function ProgramsPage() {
       title: "Cybersecurity Apprenticeship",
       duration: "10 Months",
       level: "Intermediate to Advanced",
-      stipend: "PKR 22,000-38,000/month",
       image:
         "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=400&h=250&fit=crop&crop=center",
       description:
@@ -190,7 +185,6 @@ export default function ProgramsPage() {
       title: "E-Commerce Management Internship",
       duration: "4 Months",
       level: "Intermediate",
-      stipend: "PKR 15,000-22,000/month",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop&crop=center",
       description:
@@ -228,8 +222,8 @@ export default function ProgramsPage() {
   const features = [
     {
       icon: "💰",
-      title: "Paid Internships",
-      description: "Earn while you learn with competitive monthly stipends",
+      title: "Free Internships",
+      description: "Gain experience without any cost",
     },
     {
       icon: "🏢",
@@ -255,16 +249,15 @@ export default function ProgramsPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="mb-4 bg-purple-600 hover:bg-purple-700">
-            Our Programs
+            Our Internships
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Launch Your Career with
-            <span className="text-purple-600"> Paid Internships</span>
+            <span className="text-purple-600"> Free Internships</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Join our industry-leading internship programs and get hands-on
-            experience with real companies while earning competitive stipends.
-            Build your portfolio and secure your dream job.
+            experience with real companies. Build your portfolio and secure your dream job.
           </p>
         </div>
       </section>
@@ -291,55 +284,49 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Programs Grid */}
+      {/* Internships Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Available Programs
+              Available Internships
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Choose from our comprehensive internship programs and start
-              earning while building real-world experience with top companies
+              building real-world experience with top companies
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {programs.map((program) => (
+            {internships.map((internship) => (
               <Card
-                key={program.id}
+                key={internship.id}
                 className="border-0 shadow-xl bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-300"
               >
                 <div className="relative">
                   <img
-                    src={program.image}
-                    alt={program.title}
+                    src={internship.image}
+                    alt={internship.title}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   <Badge className="absolute top-4 right-4 bg-blue-600">
-                    {program.level}
+                    {internship.level}
                   </Badge>
                 </div>
 
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <CardTitle className="text-xl text-gray-900">
-                      {program.title}
+                      {internship.title}
                     </CardTitle>
-                    <Badge
-                      variant="outline"
-                      className="text-green-600 border-green-600"
-                    >
-                      {program.stipend}
-                    </Badge>
                   </div>
                   <div className="flex gap-2 text-sm text-gray-600">
-                    <span>📅 {program.duration}</span>
+                    <span>📅 {internship.duration}</span>
                   </div>
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{program.description}</p>
+                  <p className="text-gray-700 mb-4">{internship.description}</p>
 
                   <div className="space-y-4">
                     <div>
@@ -347,7 +334,7 @@ export default function ProgramsPage() {
                         Program Modules:
                       </h4>
                       <div className="grid grid-cols-1 gap-1">
-                        {program.modules.slice(0, 3).map((module, idx) => (
+                        {internship.modules.slice(0, 3).map((module, idx) => (
                           <div
                             key={idx}
                             className="text-sm text-gray-600 flex items-center gap-2"
@@ -356,9 +343,9 @@ export default function ProgramsPage() {
                             {module}
                           </div>
                         ))}
-                        {program.modules.length > 3 && (
+                        {internship.modules.length > 3 && (
                           <div className="text-sm text-purple-600 font-medium">
-                            +{program.modules.length - 3} more modules
+                            +{internship.modules.length - 3} more modules
                           </div>
                         )}
                       </div>
@@ -369,7 +356,7 @@ export default function ProgramsPage() {
                         Partner Companies:
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {program.partnerCompanies
+                        {internship.partnerCompanies
                           .slice(0, 2)
                           .map((company, idx) => (
                             <Badge
@@ -380,9 +367,9 @@ export default function ProgramsPage() {
                               {company}
                             </Badge>
                           ))}
-                        {program.partnerCompanies.length > 2 && (
+                        {internship.partnerCompanies.length > 2 && (
                           <Badge variant="secondary" className="text-xs">
-                            +{program.partnerCompanies.length - 2} more
+                            +{internship.partnerCompanies.length - 2} more
                           </Badge>
                         )}
                       </div>
@@ -393,7 +380,7 @@ export default function ProgramsPage() {
                         Career Opportunities:
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {program.career.slice(0, 2).map((career, idx) => (
+                        {internship.career.slice(0, 2).map((career, idx) => (
                           <Badge
                             key={idx}
                             variant="outline"
@@ -402,12 +389,12 @@ export default function ProgramsPage() {
                             {career}
                           </Badge>
                         ))}
-                        {program.career.length > 2 && (
+                        {internship.career.length > 2 && (
                           <Badge
                             variant="outline"
                             className="text-xs text-gray-600"
                           >
-                            +{program.career.length - 2} more
+                            +{internship.career.length - 2} more
                           </Badge>
                         )}
                       </div>
@@ -447,8 +434,8 @@ export default function ProgramsPage() {
             {[
               {
                 step: "01",
-                title: "Choose Program",
-                desc: "Select the internship program that matches your career goals",
+                title: "Choose Internship",
+                desc: "Select the internship that matches your career goals",
               },
               {
                 step: "02",
@@ -463,7 +450,7 @@ export default function ProgramsPage() {
               {
                 step: "04",
                 title: "Start Internship",
-                desc: "Begin your paid internship and start building experience",
+                desc: "Begin your internship and start building experience",
               },
             ].map((item, index) => (
               <div key={index} className="text-center">
@@ -488,7 +475,7 @@ export default function ProgramsPage() {
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Join hundreds of successful interns who have launched their careers
-            through our paid internship programs
+            through our internship programs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/apply">

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const ProgramsSection = () => {
+const InternshipsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -105,12 +105,11 @@ const ProgramsSection = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Launch Your Career with{" "}
-            <span className="gradient-text">Paid Internships</span>
+            <span className="gradient-text">Free Internships</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Get real-world experience through paid internships and
-            apprenticeships with top companies in Pakistan. Earn while you learn
-            and secure your dream job.
+            Get real-world experience through free internships and
+            apprenticeships with top companies in Pakistan. Build your portfolio and secure your dream job.
           </p>
         </div>
 
@@ -209,12 +208,12 @@ const ProgramsSection = () => {
           }`}
           style={{ animationDelay: "800ms" }}
         >
-          <Link href="/programs">
+          <Link href="/internships">
             <Button
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-12 py-4 rounded-full text-lg font-semibold shadow-xl hover-lift transition-all-smooth"
             >
-              View All Programs
+              View All Internships
               <span className="ml-2">→</span>
             </Button>
           </Link>
@@ -224,4 +223,4 @@ const ProgramsSection = () => {
   );
 };
 
-export default ProgramsSection;
+export default InternshipsSection;

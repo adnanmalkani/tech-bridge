@@ -13,31 +13,10 @@ export default function AboutPage() {
   const team = [
     {
       name: "Hafiz Faisal Aziz",
-      role: "Director & Lead Cyber Security Engineer",
-      image: "/images/team/faisal.jpg",
+      role: "Founder & Lead Cyber Security Engineer",
+      image: "/images/faisal.jpg",
       description:
         "Visionary leader and cyber security expert with extensive experience in educational technology, digital transformation, and cybersecurity solutions. Committed to empowering Pakistani youth through innovative learning solutions while ensuring secure digital practices.",
-    },
-    {
-      name: "Adnan Malkani",
-      role: "Co-Founder & AI Engineer",
-      image: "/images/team/adnan.webp",
-      description:
-        "Expert in machine learning and artificial intelligence with a focus on educational applications and industry automation solutions.",
-    },
-    {
-      name: "Fatima Khan",
-      role: "Head of Graphics Design",
-      image: "/images/team/1.png",
-      description:
-        "Creative professional with expertise in Adobe Creative Suite, UI/UX design, and visual communication for digital platforms.",
-    },
-    {
-      name: "Muhammad Ali",
-      role: "Full Stack Developer",
-      image: "/images/5.jpeg",
-      description:
-        "Experienced developer specializing in modern web technologies, database design, and scalable application architecture.",
     },
   ];
 
@@ -133,47 +112,93 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="py-16 px-4 bg-white/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our dedicated team of professionals brings together expertise from
-              education, technology, and industry to create meaningful learning
-              experiences.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Founder Section */}
+      <section className="min-h-screen bg-white/50">
+        <div className="max-w-full mx-auto">
+          <div className="space-y-0">
             {team.map((member, index) => (
-              <Card
+              <div
                 key={index}
-                className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow text-center"
+                className={`min-h-screen flex items-center ${
+                  index % 2 === 0
+                    ? "bg-gradient-to-r from-blue-50 to-white"
+                    : "bg-gradient-to-r from-white to-indigo-50"
+                }`}
               >
-                <CardContent className="pt-6">
-                  <Avatar className="w-24 h-24 mx-auto mb-4">
-                    <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback className="text-lg font-semibold bg-blue-100 text-blue-600">
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-600 font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {member.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                  <div
+                    className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                      index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                    }`}
+                  >
+                    {/* Image Section */}
+                    <div
+                      className={`${
+                        index % 2 === 1 ? "lg:col-start-2" : ""
+                      } flex justify-center`}
+                    >
+                      <div className="relative">
+                        <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                          <Avatar className="w-full h-full">
+                            <AvatarImage
+                              src={member.image}
+                              alt={member.name}
+                              className="object-cover w-full h-full"
+                            />
+                            <AvatarFallback className="text-6xl font-bold bg-blue-100 text-blue-600 w-full h-full flex items-center justify-center">
+                              {member.name
+                                .split(" ")
+                                .map((n) => n[0])
+                                .join("")}
+                            </AvatarFallback>
+                          </Avatar>
+                        </div>
+                        {/* Decorative elements */}
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-60 animate-pulse"></div>
+                        <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-indigo-200 rounded-full opacity-40 animate-pulse animation-delay-1000"></div>
+                      </div>
+                    </div>
+
+                    {/* Text Section */}
+                    <div
+                      className={`${
+                        index % 2 === 1 ? "lg:col-start-1" : ""
+                      } space-y-6`}
+                    >
+                      <div className="space-y-4">
+                        <h3 className="text-4xl lg:text-5xl font-bold text-gray-900">
+                          {member.name}
+                        </h3>
+                        <div className="inline-block">
+                          <span className="text-xl lg:text-2xl font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 rounded-full shadow-lg">
+                            {member.role}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></div>
+
+                      <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+                        {member.description}
+                      </p>
+
+                      {/* Optional: Add social links or contact info */}
+                      <div className="flex space-x-4 pt-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors cursor-pointer">
+                          <span className="text-blue-600 font-semibold">
+                            in
+                          </span>
+                        </div>
+                        <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center hover:bg-indigo-200 transition-colors cursor-pointer">
+                          <span className="text-indigo-600 font-semibold">
+                            @
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
