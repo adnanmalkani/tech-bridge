@@ -80,7 +80,7 @@ export default function AboutPage() {
                   opportunities that allow them to gain practical skills.
                   Through our internships, boot camps, and real-world projects,
                   students not only enhance their technical expertise but also
-                  develop the problem-solving abilities that today's
+                  develop the problem-solving abilities that todays
                   fast-evolving IT landscape demands.
                 </p>
               </CardContent>
