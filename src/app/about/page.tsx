@@ -2,205 +2,152 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BackToHome from "@/components/BackToHome";
+import {
+  FaUsers,
+  FaBriefcase,
+  FaLightbulb,
+  FaHandsHelping,
+} from "react-icons/fa";
 
 export default function AboutPage() {
-  const stats = [
-    { number: "500+", label: "Students Trained" },
-    { number: "95%", label: "Job Placement Rate" },
-    { number: "50+", label: "Industry Partners" },
-    { number: "10+", label: "Years Experience" },
-  ];
-
   const team = [
     {
       name: "Hafiz Faisal Aziz",
-      role: "Director",
-      image: "./images/faisal.jpg",
+      role: "Director & Lead Cyber Security Engineer",
+      image: "/images/team/faisal.jpg",
       description:
-        "Visionary leader with extensive experience in educational technology and digital transformation. Committed to empowering Pakistani youth through innovative learning solutions.",
+        "Visionary leader and cyber security expert with extensive experience in educational technology, digital transformation, and cybersecurity solutions. Committed to empowering Pakistani youth through innovative learning solutions while ensuring secure digital practices.",
+    },
+    {
+      name: "Adnan Malkani",
+      role: "Co-Founder & AI Engineer",
+      image: "/images/team/adnan.webp",
+      description:
+        "Expert in machine learning and artificial intelligence with a focus on educational applications and industry automation solutions.",
     },
     {
       name: "Fatima Khan",
       role: "Head of Graphics Design",
-      image: "./images/6.jpeg",
-      description: "Expert in Adobe Creative Suite and UI/UX",
+      image: "/images/team/1.png",
+      description:
+        "Creative professional with expertise in Adobe Creative Suite, UI/UX design, and visual communication for digital platforms.",
     },
     {
-      name: "Mahnoor Ali",
-      role: "Digital Marketing Lead",
-      image: "./images/7.jpeg",
-      description: "Google & Facebook certified marketing expert",
-    },
-    {
-      name: "Sara Ahmad",
-      role: "Web Development Head",
-      image: "./images/8.jpeg",
-      description: "Full-stack developer with modern frameworks",
+      name: "Muhammad Ali",
+      role: "Full Stack Developer",
+      image: "/images/2.jpg",
+      description:
+        "Experienced developer specializing in modern web technologies, database design, and scalable application architecture.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <BackToHome />
+
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <Badge className="mb-4 bg-blue-600 hover:bg-blue-700">
-            About Tech Bridge Pakistan
-          </Badge>
+          <Badge className="mb-4 bg-blue-600 hover:bg-blue-700">About Us</Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Empowering Pakistan
-            <span className="text-blue-600"> Digital Future</span>
+            Bridging IT Academia
+            <span className="text-blue-600"> and Industry</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Since 2015, Tech Bridge Pakistan has been at the forefront of
-            digital education, transforming lives through comprehensive training
-            in Graphics Design, Digital Marketing, and Web Development.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            At Tech Bridge Pakistan, we are committed to bridging the gap
+            between IT academia and industry, creating a platform where both
+            students and the tech industry can thrive together.
           </p>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Main Content Sections */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <Card
-                key={index}
-                className="text-center border-0 shadow-lg bg-white/80 backdrop-blur-sm"
-              >
-                <CardContent className="pt-6">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            {/* For Students */}
             <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-600 flex items-center gap-2">
-                  <span className="text-3xl">🎯</span>
-                  Our Mission
+                <CardTitle className="text-2xl text-blue-600 flex items-center gap-3">
+                  <FaUsers className="text-3xl" />
+                  For Students
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">
-                  To provide world-class digital skills training that empowers
-                  Pakistani youth with the knowledge and expertise needed to
-                  excel in the global digital economy. We are committed to
-                  bridging the skills gap and creating opportunities for
-                  sustainable career growth.
+                  We provide deserving IT students with invaluable hands-on
+                  experience, industry-driven training, and mentorship
+                  opportunities that allow them to gain practical skills.
+                  Through our internships, boot camps, and real-world projects,
+                  students not only enhance their technical expertise but also
+                  develop the problem-solving abilities that today's
+                  fast-evolving IT landscape demands.
                 </p>
               </CardContent>
             </Card>
 
+            {/* For Industry */}
             <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-600 flex items-center gap-2">
-                  <span className="text-3xl">🚀</span>
-                  Our Vision
+                <CardTitle className="text-2xl text-indigo-600 flex items-center gap-3">
+                  <FaBriefcase className="text-3xl" />
+                  For Industry
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 leading-relaxed">
-                  To become Pakistan leading digital skills institute,
-                  recognized for excellence in education and innovation. We
-                  envision a future where every Pakistani has access to quality
-                  digital education and the opportunity to thrive in the digital
-                  age.
+                  We partner with leading tech companies to provide them with a
+                  pipeline of highly skilled, motivated, and industry-ready
+                  talent. By offering opportunities for students to work on live
+                  projects, companies gain access to fresh perspectives and the
+                  next generation of innovators, all while contributing to the
+                  development of the workforce they rely on.
                 </p>
               </CardContent>
             </Card>
           </div>
+
+          {/* Our Mission */}
+          <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm mb-16">
+            <CardHeader>
+              <CardTitle className="text-3xl text-purple-600 flex items-center justify-center gap-3 text-center">
+                <FaLightbulb className="text-4xl" />
+                Our Mission
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
+                Our mission is simple: to create a sustainable ecosystem where
+                the needs of students and the IT industry are seamlessly met.
+                Through collaboration and experience-sharing, we ensure that
+                students enter the workforce with the practical skills they
+                need, while the industry gains professionals who are equipped to
+                drive progress, innovation, and success.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto font-medium">
+                Join us in shaping the future of IT, one student and one project
+                at a time.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Our Team Section */}
       <section className="py-16 px-4 bg-white/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Tech Bridge Pakistan?
+              Meet Our Team
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We offer more than just courses - we provide a complete learning
-              ecosystem
+              Our dedicated team of professionals brings together expertise from
+              education, technology, and industry to create meaningful learning
+              experiences.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <div className="text-4xl mb-4">💼</div>
-                <CardTitle className="text-xl text-gray-900">
-                  Industry-Relevant Curriculum
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Our courses are designed in collaboration with industry
-                  experts to ensure you learn the most current and in-demand
-                  skills.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <div className="text-4xl mb-4">👨‍🏫</div>
-                <CardTitle className="text-xl text-gray-900">
-                  Expert Instructors
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Learn from certified professionals with years of real-world
-                  experience in their respective fields.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <div className="text-4xl mb-4">🎓</div>
-                <CardTitle className="text-xl text-gray-900">
-                  Job Placement Support
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  We provide comprehensive career support including job
-                  placement assistance and industry connections.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Expert Team
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our dedicated team of professionals brings years of industry
-              experience to guide your learning journey
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <Card
                 key={index}
@@ -209,7 +156,7 @@ export default function AboutPage() {
                 <CardContent className="pt-6">
                   <Avatar className="w-24 h-24 mx-auto mb-4">
                     <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback className="text-xl">
+                    <AvatarFallback className="text-lg font-semibold bg-blue-100 text-blue-600">
                       {member.name
                         .split(" ")
                         .map((n) => n[0])
@@ -219,10 +166,12 @@ export default function AboutPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
-                  <Badge variant="secondary" className="mb-3">
+                  <p className="text-blue-600 font-medium mb-3">
                     {member.role}
-                  </Badge>
-                  <p className="text-sm text-gray-600">{member.description}</p>
+                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -231,23 +180,17 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your Digital Journey?
+          <FaHandsHelping className="text-5xl mx-auto mb-6 opacity-90" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Make an Impact?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of successful graduates who have transformed their
-            careers with Tech Bridge Pakistan
+          <p className="text-xl mb-8 opacity-90">
+            Join our mission to empower the next generation of IT professionals
+            and bridge the gap between academia and industry.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              View Courses
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Contact Us
-            </button>
-          </div>
+          {/* Add contact button or link here if needed */}
         </div>
       </section>
     </div>

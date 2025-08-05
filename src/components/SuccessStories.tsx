@@ -14,35 +14,38 @@ const SuccessStories = () => {
   const stories = [
     {
       name: "Ahmed Hassan",
-      course: "Digital Marketing",
-      position: "Digital Marketing Manager",
+      program: "Cyber Security Apprenticeship",
+      duration: "9 months",
+      position: "Cyber Security Analyst",
       company: "TechCorp Solutions",
       story:
-        "After completing the digital marketing course at Tech Bridge Pakistan, I landed my dream job as a Digital Marketing Manager. The practical training and industry insights were invaluable.",
+        "After completing a 9-month cyber-security apprenticeship at Tech Bridge Pakistan, I stepped into the role of Cyber Security Analyst. The real-world threat-hunting projects and expert mentorship were game-changers.",
       salary: "PKR 80,000/month",
       gradient: "from-blue-500 to-cyan-500",
-      icon: "📱",
+      icon: "🛡️",
       image: "./images/1.jpg",
     },
     {
       name: "Fatima Khan",
-      course: "Graphics Design",
-      position: "Senior Graphic Designer",
+      program: "AI Engineering Internship",
+      duration: "8 months",
+      position: "AI Engineer",
       company: "Creative Agency",
       story:
-        "The graphics design course transformed my creative skills. I now work with international clients and have my own design studio.",
+        "During my 8-month AI engineering internship, I built and deployed machine-learning models used by international clients. The experience leveled up my career as an AI Engineer.",
       salary: "PKR 65,000/month",
       gradient: "from-purple-500 to-pink-500",
-      icon: "🎨",
+      icon: "🤖",
       image: "./images/4.jpeg",
     },
     {
       name: "Urooj Khan",
-      course: "Web Development",
-      position: "Full Stack Developer",
+      program: "Software Development Apprenticeship",
+      duration: "12 months",
+      position: "Software Developer",
       company: "StartupTech",
       story:
-        "From zero coding knowledge to becoming a full-stack developer in 6 months. Tech Bridge Pakistan's curriculum is industry-focused and practical.",
+        "From zero coding knowledge to production-ready software in a year! Tech Bridge Pakistan’s 12-month software-development apprenticeship equipped me with full-stack skills and confidence.",
       salary: "PKR 120,000/month",
       gradient: "from-green-500 to-teal-500",
       icon: "💻",
@@ -150,7 +153,7 @@ const SuccessStories = () => {
                     Course:
                   </span>
                   <span className="font-medium text-gray-800 text-xs sm:text-sm">
-                    {story.course}
+                    {story.program}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-1.5 sm:py-2">
