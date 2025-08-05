@@ -9,14 +9,14 @@ export default function SuccessStoriesPage() {
     {
       id: 1,
       name: "Ahmed Hassan",
-      course: "Digital Marketing Expert",
-      currentRole: "Digital Marketing Manager at TechCorp",
+      course: "Cyber Security Apprenticeship",
+      currentRole: "Cyber Security Analyst at TechCorp",
       salary: "PKR 80,000/month",
       image: "./images/1.jpg",
       story:
-        "After completing the Digital Marketing course at Tech Bridge Pakistan, I landed my dream job within 2 months. The practical training and industry connections made all the difference.",
+        "After completing a 9-month cyber-security apprenticeship at Tech Bridge Pakistan, I landed my dream job within 2 months. Hands-on threat-hunting projects and industry mentors made all the difference.",
       achievement: "300% salary increase",
-      duration: "8 months course",
+      duration: "9 months apprenticeship",
       rating: 5,
       company: "TechCorp Solutions",
       linkedin: "https://linkedin.com/in/ahmed-hassan",
@@ -24,14 +24,14 @@ export default function SuccessStoriesPage() {
     {
       id: 2,
       name: "Fatima Khan",
-      course: "Graphics Designing Mastery",
-      currentRole: "Senior UI/UX Designer at Creative Agency",
+      course: "AI Engineering Internship",
+      currentRole: "AI Engineer at Creative Agency",
       salary: "PKR 70,000/month",
-      image: "./images/6.jpeg",
+      image: "./images/4.jpeg",
       story:
-        "Tech Bridge Pakistan transformed my creative passion into a successful career. The portfolio I built during the course helped me secure multiple job offers.",
+        "Tech Bridge Pakistan turned my passion for AI into a career. During the 8-month internship I built and deployed ML models, which helped me secure multiple offers.",
       achievement: "5 job offers received",
-      duration: "6 months course",
+      duration: "8 months internship",
       rating: 5,
       company: "Creative Minds Agency",
       linkedin: "https://linkedin.com/in/fatima-khan",
@@ -39,15 +39,15 @@ export default function SuccessStoriesPage() {
     {
       id: 3,
       name: "Ali Raza",
-      course: "Web Development Bootcamp",
+      course: "Software Development Apprenticeship",
       currentRole: "Full-Stack Developer at StartupXYZ",
       salary: "PKR 90,000/month",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       story:
-        "From zero coding knowledge to building complex web applications. Tech Bridge Pakistan comprehensive curriculum and expert mentorship made it possible.",
+        "From zero coding knowledge to shipping production apps. The 12-month apprenticeship’s comprehensive curriculum and mentorship made it possible.",
       achievement: "Built 10+ projects",
-      duration: "10 months course",
+      duration: "12 months apprenticeship",
       rating: 5,
       company: "StartupXYZ",
       linkedin: "https://linkedin.com/in/ali-raza",
@@ -55,15 +55,15 @@ export default function SuccessStoriesPage() {
     {
       id: 4,
       name: "Sara Ahmed",
-      course: "E-Commerce Specialist",
+      course: "E-Commerce Operations Apprenticeship",
       currentRole: "E-Commerce Business Owner",
       salary: "PKR 150,000/month",
       image:
         "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
       story:
-        "I started my own online store after the course and now generate 6-figure monthly revenue. The practical knowledge was invaluable.",
+        "I launched my online store after a 9-month apprenticeship and now generate 6-figure monthly revenue. The practical, growth-focused training was invaluable.",
       achievement: "6-figure monthly revenue",
-      duration: "4 months course",
+      duration: "9 months apprenticeship",
       rating: 5,
       company: "Own Business",
       linkedin: "https://linkedin.com/in/sara-ahmed",
@@ -71,15 +71,15 @@ export default function SuccessStoriesPage() {
     {
       id: 5,
       name: "Muhammad Usman",
-      course: "Mobile App Development",
+      course: "Mobile App Development Apprenticeship",
       currentRole: "iOS Developer at Tech Giant",
       salary: "PKR 100,000/month",
       image:
         "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
       story:
-        "The mobile app development course opened doors to international opportunities. I now work remotely for a US-based company.",
+        "The mobile app development apprenticeship opened doors to international opportunities. I now work remotely for a US-based company.",
       achievement: "Remote international job",
-      duration: "12 months course",
+      duration: "12 months apprenticeship",
       rating: 5,
       company: "Tech Giant Inc.",
       linkedin: "https://linkedin.com/in/muhammad-usman",
@@ -87,15 +87,15 @@ export default function SuccessStoriesPage() {
     {
       id: 6,
       name: "Ayesha Malik",
-      course: "Data Analytics & Visualization",
+      course: "Data Analytics & Visualization Internship",
       currentRole: "Data Analyst at Financial Corp",
       salary: "PKR 75,000/month",
       image:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
       story:
-        "The data analytics course helped me transition from a non-tech background to a high-paying tech career. The support was exceptional.",
+        "This 9-month internship helped me switch from a non-tech background to a high-paying analytics role. The support and portfolio building were exceptional.",
       achievement: "Career transition success",
-      duration: "6 months course",
+      duration: "9 months internship",
       rating: 5,
       company: "Financial Corp",
       linkedin: "https://linkedin.com/in/ayesha-malik",
@@ -146,17 +146,17 @@ export default function SuccessStoriesPage() {
 
   const testimonials = [
     {
-      text: "Tech Bridge Pakistan doesn't just teach you skills; they transform your entire career trajectory. The practical approach and industry connections are unmatched.",
+      text: "Tech Bridge Pakistan doesn't just teach you skills; they transform your entire career trajectory. The practical, mentor-led programs and industry connections are unmatched.",
       author: "Ahmed Hassan",
-      role: "Digital Marketing Manager",
+      role: "Cyber Security Analyst",
     },
     {
-      text: "The quality of education and the support system at Tech Bridge Pakistan is exceptional. I recommend it to anyone looking to advance their career in tech.",
+      text: "The quality of training and support is exceptional. I recommend it to anyone aiming to break into AI through a serious internship or apprenticeship.",
       author: "Fatima Khan",
-      role: "Senior UI/UX Designer",
+      role: "AI Engineer",
     },
     {
-      text: "From a complete beginner to landing a high-paying job in just 10 months. Tech Bridge Pakistan made my dreams come true.",
+      text: "From complete beginner to a high-paying job in under a year. The software development apprenticeship made my dreams come true.",
       author: "Ali Raza",
       role: "Full-Stack Developer",
     },
@@ -176,8 +176,8 @@ export default function SuccessStoriesPage() {
             <span className="text-blue-600"> Real Success </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover how our graduates have transformed their careers and
-            achieved remarkable success in the digital industry.
+            Discover how our graduates have transformed their careers through
+            immersive internships and apprenticeships.
           </p>
         </div>
       </section>
@@ -212,8 +212,8 @@ export default function SuccessStoriesPage() {
               Graduate Success Stories
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet our successful graduates who have transformed their careers
-              and achieved their dreams
+              Meet graduates who advanced through our internship and
+              apprenticeship programs
             </p>
           </div>
 
@@ -275,7 +275,7 @@ export default function SuccessStoriesPage() {
                     </div>
                     <div className="bg-blue-50 p-3 rounded-lg">
                       <div className="text-sm font-semibold text-blue-800">
-                        Course Duration
+                        Program Duration
                       </div>
                       <div className="text-sm text-blue-600">
                         {story.duration}
@@ -309,8 +309,8 @@ export default function SuccessStoriesPage() {
               What Our Graduates Say
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear directly from our successful graduates about their experience
-              at Tech Bridge Pakistan
+              Hear directly from our graduates about their internship and
+              apprenticeship experience at Tech Bridge Pakistan
             </p>
           </div>
 
@@ -347,10 +347,6 @@ export default function SuccessStoriesPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Graduates Work At
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Leading companies trust our graduates and actively recruit from
-              our programs
-            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -393,7 +389,7 @@ export default function SuccessStoriesPage() {
               {
                 step: "1",
                 title: "Enroll",
-                desc: "Join our comprehensive training program",
+                desc: "Join our immersive internship or apprenticeship program",
                 icon: "📝",
               },
               {
@@ -405,7 +401,7 @@ export default function SuccessStoriesPage() {
               {
                 step: "3",
                 title: "Build",
-                desc: "Create impressive portfolio projects",
+                desc: "Create impressive, real-world portfolio projects",
                 icon: "🛠️",
               },
               {

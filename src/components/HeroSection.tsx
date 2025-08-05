@@ -25,14 +25,14 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div
-            className={`space-y-6 lg:space-y-8 transition-all duration-1000 ${
+            className={`space-y-6 lg:space-y-8 transition-all duration-1000 mb-10 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-10"
             }`}
           >
             {/* Admissions Badge */}
-            <div className="inline-flex items-center glass px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium text-blue-700 hover-glow transition-all-smooth mt-4">
+            <div className="inline-flex items-center glass px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium text-blue-700 hover-glow transition-all-smooth mt-5">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2 sm:mr-3 animate-pulse"></span>
               Applications Open 2025
             </div>
