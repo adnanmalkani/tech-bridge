@@ -35,7 +35,7 @@ export default function AboutPage() {
     {
       name: "Muhammad Ali",
       role: "Full Stack Developer",
-      image: "/images/2.jpg",
+      image: "/images/5.jpeg",
       description:
         "Experienced developer specializing in modern web technologies, database design, and scalable application architecture.",
     },
